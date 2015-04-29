@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
     r.rating = params["rating"]
     r.desc = params["desc"]
     r.save
-    redirect_to "/places/#{r.place_id}"
+    redirect_to place_url(r.place_id)
   end
 
 end
